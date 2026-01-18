@@ -1,6 +1,6 @@
 ---
-title: "Test post"
-summary: "Description for test post"
+title: Test post
+summary: Description for test post
 published: 2026-01-13
 ---
 
