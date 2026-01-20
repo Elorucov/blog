@@ -25,10 +25,8 @@ jobs:
       - name: Adding posts in archive
         uses: edgarrc/action-7z@v1
         with:
-          super_secret: ${{ secrets.ARCHIVE_PASSWORD }}
-          args: 7z a -t7z -mx=9 -xr!.git -xr!.github -p$super_secret build.7z ./
+          args: 7z a -t7z -mx=9 -xr!.git -xr!.github -p${{ secrets.ARCHIVE_PASSWORD }} build.7z ./
       - name: Upload to server
         uses: sozo-design/curl@v1.0.2
         with:
-          upload_url: ${{ secrets.UPLOAD_URL }}
-          args: -F "mdarchive=@build.7z" upload_url
+          args: -F "mdarchive=@build.7z" ${{ secrets.UPLOAD_URL }}
