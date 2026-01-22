@@ -16,7 +16,7 @@ I decided to implement a similar animation in my project. However, searching the
 
 I defined the following requirements for myself:
 
-- It should be possible to animate child elements of any panel—not only built-in ones like `Grid` and `StackPanel`, but also custom panels, since I planned to use the animation specifically with a custom panel.
+- It should be possible to animate child elements of any panel — not only built-in ones like `Grid` and `StackPanel`, but also custom panels, since I planned to use the animation specifically with a custom panel.
 - If there are panels among the child elements, their children should also be animated. In other words, we need to recursively retrieve all elements from all nested panels and animate them. This is necessary because I planned to animate both the post text (`RichTextBlock`) and elements inside a custom panel (called `MediaGridPanel`), and both are located within the same `StackPanel`.
 
 ## Writing the code
