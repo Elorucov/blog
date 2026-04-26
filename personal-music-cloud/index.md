@@ -216,4 +216,7 @@ In `proxy_pass`, use the Tailscale IP of your storage server. Port `8096` is Jel
 
 Restart nginx and verify everything works. You're done!
 
+
+**Screenshot** *(with changed URL so that the current address is not known)*
+
 ![Web-version of Jellyfin](https://github.com/Elorucov/blog/blob/main/personal-music-cloud/jellyfin_web.jpg?raw=true)
