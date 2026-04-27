@@ -24,7 +24,7 @@ That's when the **desync problem** first appeared. Some tracks existed everywher
 
 In 2021 I decided to try Spotify. What I loved about it was the genre-aware recommendations — listening to something would surface similar tracks, and I kept discovering new artists. Naturally, everything new I found on Spotify went straight into my Spotify library. Including a handful of tracks I already had on the laptop or in VK, which made the desync even worse. SoundCloud got quietly abandoned.
 
-I started thinking about consolidating everything into one place. At the time I was using Spotify's free tier through a browser and was considering going Premium — but in 2025 my Spotify account literally *vanished*. "No account with that email," the app said, yet trying to register with the same email produced a message saying the account *already exists*. Classic. Fortunately, a few months earlier I had migrated my Spotify library to YouTube Music. I hadn't been very impressed with YTM at the time, so I kept using Spotify as my primary app — but after losing the account, I still had roughly 70% of my Spotify library waiting for me in YouTube Music.
+I started thinking about consolidating everything into one place. At the time I was using Spotify's free tier through a browser and was considering going Premium — but in 2025 my Spotify account literally *vanished*. "No account with that email," the Spotify said, yet trying to register with the same email produced a message saying the account *already exists*. Classic. Fortunately, a few months earlier I had migrated my Spotify library to YouTube Music. I hadn't been very impressed with YTM at the time, so I kept using Spotify as my primary service — but after losing the account, I still had roughly 70% of my Spotify library has been transferred to YouTube Music.
 
 ### The Self-Hosted Era
 
@@ -34,7 +34,7 @@ From late 2025 I started seriously thinking about a full library overhaul. My go
 * Store music in the cloud (my own cloud)
 * Prune tracks I no longer listen to
 
-There's also a fundamental problem with streaming services worth mentioning: **rights holders can pull their content at any time**, and when they do, those tracks simply disappear from your library. It's happened to me more than once. When you own your files, your favorites are yours to keep — forever.
+There's also a fundamental problem with streaming services worth mentioning: **rights holders can remove their content at any time**, and when they do, those tracks simply disappear from your library. It's happened to me more than once. When you own your files, your favorites are yours to keep — forever.
 
 My first thought was storing everything on a VDS. I already have a free Oracle VDS, but the storage is tiny, and it's already doing other things. Renting another VDS wasn't an option at the time for financial reasons.
 
@@ -53,7 +53,7 @@ So I installed Jellyfin. It works well enough overall. The one pain point is the
 - **The official app** is just a web view wrapper
 - **One third-party app** is built in React Native, noticeably sluggish — and couldn't even play music properly
 - **Another** is in Flutter — didn't even bother installing it
-- **A third** uses Jetpack Compose with a "pseudo-native" feel, but after installing I discovered it only supports video content and has zero music library support
+- **A third** is a "pseudo-native" Jetpack Compose app, but after installing I discovered it only supports video content and has zero music library support
 
 Eventually I found a [fork](https://github.com/adrianvic/jamfish) of a long-abandoned alternative client written in Java (rare these days, but honestly I kind of like it). It has its own quirks — the song list shows the track name and album but no artist — but it's fixable. I know a bit of Java, so I might take a crack at it eventually.
 
@@ -79,11 +79,11 @@ All that remained was configuring nginx — which we'll cover in the next sectio
 
 You can use pretty much any machine for this — even a Raspberry Pi (preferably a recent, beefier model). In my case it's a 2012 laptop: Intel Core i3, 8 GB RAM, 500 GB HDD. Not exactly a powerhouse — it was a budget machine even back then, and it originally shipped with 4 GB RAM and a 1 TB HDD. The hard drive started failing just four years later, but that's a story for another day.
 
-For the operating system, I'd strongly recommend Linux. Unfortunately, I'm currently running **Windows Server 2022** on mine due to a somewhat embarrassing reason: I can't physically place the laptop next to the router for a wired connection, and its Wi-Fi adapter doesn't play nicely with Linux. Once I can sort out the cable situation, I plan to switch to Linux.
+For the operating system, I'd strongly recommend Linux. Unfortunately, I'm currently running **Windows Server 2022** on mine due to a somewhat embarrassing reason: I can't physically place the laptop next to the router for a wired connection, and its Wi-Fi adapter doesn't work with Linux. Once I can sort out the cable situation, I plan to switch to Linux.
 
 Once you've prepared your device and installed an OS, install Jellyfin. Downloads are [here](https://jellyfin.org/downloads); installation instructions are on the site (or just Google it 😊).
 
-One important step: in the Jellyfin dashboard, go to **Dashboard → Networking** and make sure **"Allow remote connections to this server"** is enabled.
+One important step: in the Jellyfin, go to **Dashboard → Networking** and make sure **"Allow remote connections to this server"** is enabled.
 
 Next, install the Tailscale client on the storage server — but first, let's set up the VDS.
 
